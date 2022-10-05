@@ -1,0 +1,76 @@
+<div class="typeform-quiz" style="margin-top: 2rem">
+    <!-- <div
+        data-tf-widget="PpElvgSC"
+        data-tf-iframe-props="title=Quiz: qual a solução de segurança de dados na nuvem ideal para a sua empresa?"
+        data-tf-medium="snippet"
+        style="width: 100%; height: 600px"
+    ></div>
+    <script src="//embed.typeform.com/next/embed.js"></script> -->
+</div>
+
+<!-- SCRIPT -->
+<script>
+    const queryForm = function (settings) {
+        let FULL_STRING_UTMS = "";
+        const reset = settings && settings.reset ? settings.reset : false;
+        const self = window.location.toString();
+        const querystring = self.split("?");
+
+        if (querystring.length > 1) {
+            const pairs = querystring[1].split("&");
+            for (i in pairs) {
+                var keyval = pairs[i].split("=");
+
+                FULL_STRING_UTMS += `${keyval[0]}=${keyval[1]},`;
+
+                if (reset || sessionStorage.getItem(keyval[0]) === null) {
+                    sessionStorage.setItem(
+                        keyval[0],
+                        decodeURIComponent(keyval[1])
+                    );
+                }
+            }
+        }
+
+        let FULL_STRING_UTMS_EDITED = FULL_STRING_UTMS.slice(0, -1);
+
+        if (FULL_STRING_UTMS_EDITED) {
+            const quizWrapper = document.querySelector(".typeform-quiz");
+
+            quizWrapper.innerHTML = `
+            <div
+                data-tf-widget="PpElvgSC"
+                data-tf-iframe-props="title=Quiz: qual a solução de segurança de dados na nuvem ideal para a sua empresa?"
+                data-tf-medium="snippet"
+                data-tf-hidden="${FULL_STRING_UTMS_EDITED}"
+                style="width: 100%; height: 600px"
+            ></div>
+           
+            `;
+
+            const scriptTag = document.createElement("script");
+            scriptTag.setAttribute("src", "//embed.typeform.com/next/embed.js");
+            quizWrapper.append(scriptTag);
+        } else {
+            const quizWrapper = document.querySelector(".typeform-quiz");
+
+            quizWrapper.innerHTML = `
+            <div
+                data-tf-widget="PpElvgSC"
+                data-tf-iframe-props="title=Quiz: qual a solução de segurança de dados na nuvem ideal para a sua empresa?"
+                data-tf-medium="snippet"
+                data-tf-hidden=""
+                style="width: 100%; height: 600px"
+            ></div>
+            `;
+
+            const scriptTag = document.createElement("script");
+            scriptTag.setAttribute("src", "//embed.typeform.com/next/embed.js");
+            quizWrapper.append(scriptTag);
+        }
+    };
+
+    setTimeout(() => {
+        queryForm();
+    }, 1000);
+</script>

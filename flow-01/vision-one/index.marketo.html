@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- Meta tags -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta
+            name="description"
+            content="Neutralize ameaças automaticamente e proteja sua empresa contra todos os tipos de ciberataques com o Vision One."
+        />
+
+        <!-- title -->
+        <title>
+            Trend Micro (BR) | Vision One - Cibersegurança Corporativa
+        </title>
+
+        <!-- GTM HEAD -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-W9G8FN9");
+        </script>
+
+        <!-- Favicon -->
+        <link
+            rel="shortcut icon"
+            href="https://resources.trendmicro.com/rs/945-CXD-062/images/trendmicro-favicon.png"
+            type="image/png"
+        />
+
+        <!-- Libs -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
+        <script src="//resources.trendmicro.com/js/forms2/js/forms2.min.js"></script>
+
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.css"
+            defer
+        />
+
+        <!-- CSS -->
+        <!-- <link rel="stylesheet" href="global.css" /> -->
+
+        <style>
+            @font-face {
+                font-family: "Interstate";
+                font-display: swap;
+                src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-EXTRALIGHT.OTF");
+                font-weight: 300;
+            }
+
+            @font-face {
+                font-family: "Interstate";
+                font-display: swap;
+                src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-BOLD.OTF");
+                font-weight: 700;
+            }
+
+            /* -------------- RESET CSS -------------- */
+            *,
+            *::before,
+            *::after {
+                box-sizing: border-box;
+                padding: 0;
+                margin: 0;
+            }
+
+            html {
+                scroll-behavior: smooth;
+                font-size: 87.35%;
+            }
+
+            @media (min-width: 45em) {
+                html {
+                    font-size: 93.5%;
+                }
+            }
+
+            @media (min-width: 70em) {
+                html {
+                    font-size: 100%;
+                }
+            }
+
+            @media (min-width: 100em) {
+                html {
+                    font-size: 110%;
+                }
+            }
+
+            body {
+                min-height: 100vh;
+                text-rendering: optimizeSpeed;
+                line-height: 1.5;
+            }
+
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+
+            img {
+                max-width: 100%;
+                display: block;
+            }
+
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+
+            button {
+                cursor: pointer;
+            }
+
+            @media (prefers-reduced-motion: reduce) {
+                html:focus-within {
+                    scroll-behavior: auto;
+                }
+
+                *,
+                *::before,
+                *::after {
+                    animation-duration: 0.01ms !important;
+                    animation-iteration-count: 1 !important;
+                    transition-duration: 0.01ms !important;
+                    scroll-behavior: auto !important;
+                }
+            }
+
+            /* -------------- GLOBAL CSS -------------- */
+            :root {
+                --ff-primary: "Interstate", sans-serif;
+
+                --clr-neutral-light: #ffffff;
+                --clr-neutral-dark: #000000;
+
+                --clr-red-400: #d71a22;
+                --clr-red-700: #b0191a;
+
+                --footer-bg: #4d4d4f;
+                --light-bg: #f5f5f5;
+
+                --gradient: #c81820 0%, #640c10 100%;
+            }
+
+            * {
+                font-family: var(--ff-primary);
+            }
+
+            /* general classes */
+            .container {
+                max-width: 1400px;
+                width: 100%;
+
+                margin-inline: auto;
+                padding-inline: 1.5em;
+            }
+
+            @media (min-width: 45em) {
+                .container {
+                    padding-inline: 4em;
+                }
+            }
+
+            @media (min-width: 60em) {
+                .container {
+                    padding-inline: 5.35em;
+                }
+            }
+
+            .btn {
+                border: none;
+                outline: none;
+                display: inline-block;
+                border-radius: 6px;
+                padding: 0.75em;
+
+                color: var(--clr-neutral-light);
+                background-color: var(--clr-red-400);
+
+                font-weight: 700;
+                font-size: 1rem;
+                text-align: center;
+
+                transition: filter 300ms ease;
+                min-width: 18em;
+            }
+
+            .btn:hover,
+            .btn:focus {
+                filter: brightness(0.8);
+            }
+
+            .bold {
+                font-weight: bold !important;
+            }
+
+            .clr-red {
+                color: var(--clr-red-700);
+            }
+
+            .uppercase {
+                text-transform: uppercase;
+            }
+
+            /* ---------------------- HEADER ---------------------- */
+            .header {
+                --spacing: 75px;
+                padding: var(--spacing) 0;
+
+                background-color: var(--clr-neutral-light);
+                /* background-image: url("./assets/headercroped.png"); */
+                background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/headercroped_visionone.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: left;
+                background-attachment: fixed;
+            }
+
+            .header__logo {
+                max-width: 270px;
+                margin-bottom: var(--spacing);
+            }
+
+            .header__title {
+                line-height: 1.2;
+                font-size: 1.5rem;
+
+                margin-bottom: 50px;
+            }
+
+            .header__title span {
+                display: inline;
+            }
+
+            .header__text {
+                font-size: 1rem;
+
+                max-width: 40ch;
+            }
+
+            @media (min-width: 45em) {
+                .header {
+                    padding-left: 3rem;
+                }
+
+                .header__title {
+                    font-size: 2rem;
+                    max-width: 30ch;
+                }
+
+                .header__title span {
+                    display: block;
+                }
+
+                .header__text {
+                    font-size: 1.125rem;
+                }
+            }
+
+            @media (min-width: 50em) {
+                .header {
+                    display: grid;
+                    grid-template-columns: 1.5em 5fr 1fr 1.5em;
+                }
+
+                .header__container {
+                    grid-column: 2/3;
+                }
+            }
+
+            @media (min-width: 60em) {
+                .header__title {
+                    font-size: 2.25rem;
+                }
+            }
+            /* ---------------------- SECTION 01 ---------------------- */
+            .section__first--content,
+            .section__first--form-container {
+                padding: 1.5em;
+            }
+
+            .section__first--content {
+                background-image: linear-gradient(var(--gradient));
+                color: var(--clr-neutral-light);
+
+                display: flex;
+                flex-direction: column;
+
+                justify-content: center;
+                gap: 1.25em;
+                font-weight: 300;
+            }
+
+            .section__first--content p {
+                font-size: 15px;
+                font-weight: 300;
+            }
+
+            @media (min-width: 45em) {
+                .section__first--content {
+                    padding: 7%;
+                }
+
+                .section__first--content p {
+                    font-size: 16px;
+                }
+            }
+
+            @media (min-width: 60em) {
+                .section__first--content p {
+                    font-size: 20px;
+                }
+                .section__first--content {
+                    padding: 2% 10% 2% 22%;
+                }
+            }
+
+            .section__first--form-container {
+                background-color: var(--light-bg);
+                padding: 10% 7%;
+            }
+
+            .section__first--form-container h2 {
+                text-align: center;
+                line-height: 1.2;
+
+                font-size: 20px;
+
+                font-weight: 300;
+            }
+
+            .section__first--form-container h2 strong {
+                font-weight: 700;
+            }
+
+            .section__first--form-container form {
+                margin-top: 1em;
+                display: grid;
+                gap: 0.15em;
+
+                width: 90% !important;
+
+                margin-inline: auto;
+            }
+
+            .section__first--form-container input::placeholder,
+            .section__first--form-container select::placeholder {
+                opacity: 0.8;
+            }
+
+            @media (min-width: 40em) {
+                .section__first--form-container h2 {
+                    font-size: 26px;
+                    margin-bottom: 2rem !important;
+                }
+            }
+
+            @media (min-width: 50em) {
+                .section__first {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            /* ---------------------- SECTION 02 ---------------------- */
+            .section__second--container {
+                padding-block: 6em;
+            }
+
+            .section__second--container header {
+                text-align: center;
+            }
+
+            .section__second--container span {
+                font-size: 1rem;
+            }
+
+            .section__second--container h2 {
+                margin-block: 0.25em 0.75em;
+                font-size: clamp(1.5625rem, calc(1rem + 3.5vw), 2rem);
+                line-height: 1.2;
+            }
+
+            .section__second--container header p {
+                max-width: 60ch;
+                font-size: 19px;
+                margin-inline: auto;
+            }
+
+            .section__second--cards {
+                margin-block: 6em;
+
+                display: flex;
+                flex-wrap: wrap;
+                gap: 2.5em;
+            }
+
+            .section__second--card {
+                flex: 1 1 25rem;
+            }
+
+            .section__second--card img {
+                max-width: 47px;
+                aspect-ratio: 1;
+            }
+
+            .section__second--card h3 {
+                font-size: 1.5rem;
+                line-height: 1.2;
+
+                margin-block: 20px;
+            }
+
+            .section__second--footer {
+                display: flex;
+                justify-content: center;
+            }
+
+            .section__second--footer button {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-inline: auto;
+
+                font-size: 1.1rem;
+            }
+
+            @media (min-width: 40em) {
+                .section__second--cards {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2em;
+                }
+            }
+
+            @media (min-width: 50em) {
+                .section__second--cards {
+                    column-gap: 6em;
+                    row-gap: 4em;
+                }
+            }
+
+            /* ---------------------- SECTION 03 ---------------------- */
+            .section__third {
+                background-color: var(--light-bg);
+            }
+
+            .section__third--container {
+                padding-block: 6.25em;
+            }
+
+            .section__third--header p {
+                margin-block: 1.75em;
+                font-size: 1.115rem;
+
+                max-width: 550px;
+            }
+
+            .section__third--header h2 {
+                font-size: clamp(1.5625rem, calc(1rem + 3.5vw), 2rem);
+                max-width: 32ch;
+                line-height: 1.2;
+            }
+
+            .section__third--main {
+                margin-top: 3em;
+
+                display: grid;
+                gap: 2em;
+            }
+
+            .section__third--card {
+                display: grid;
+                gap: 1em;
+            }
+
+            .section__third--card p {
+                font-size: 19px;
+            }
+
+            .section__third--button {
+                margin-inline: auto;
+                width: max-content;
+            }
+
+            .section__third--footer {
+                margin-top: 3em;
+
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (min-width: 45em) {
+                .section__third {
+                    background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/shape_visionone.png");
+                    background-position: right -20px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                }
+
+                .section__third--container {
+                    padding-right: 10rem;
+                }
+
+                .section__third--main {
+                    grid-template-columns: 1fr 1fr;
+                }
+            }
+
+            @media (min-width: 55em) {
+                .section__third--main {
+                    grid-template-columns: 1fr 1fr 1fr;
+                }
+            }
+
+            /* ---------------------- SECTION 04 ---------------------- */
+            .section__fourth {
+                padding-block: 6em;
+            }
+
+            .section__fourth--container {
+                display: grid;
+                gap: 2em;
+            }
+
+            .section__fourth--content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5em;
+
+                font-size: 1.125rem;
+            }
+
+            .section__fourth--content h2 {
+                font-size: clamp(1.875rem, calc(1rem + 2vw), 3rem);
+
+                line-height: 1.2;
+            }
+
+            .section__fourth--btn {
+                font-size: 15px;
+                max-width: max-content;
+                padding-inline: 3.5em;
+            }
+
+            @media (min-width: 40em) {
+                .section__fourth--container {
+                    grid-template-columns: 1fr 1fr;
+                    align-items: center;
+                    gap: 4.5em;
+                }
+            }
+
+            @media (min-width: 70em) {
+                .section__fourth--container {
+                    gap: 8em;
+                }
+            }
+
+            /* FOOTER */
+            .footer {
+                display: grid;
+                place-items: center;
+
+                background-color: var(--footer-bg);
+                color: var(--clr-neutral-light);
+
+                font-size: 0.875rem;
+                padding: 2.3125em 1.5em;
+
+                text-align: center;
+            }
+
+            /* DIV MARKETO */
+            div#innerWrapDiv {
+                width: 100% !important;
+                height: 100vh !important;
+                overflow-x: hidden;
+            }
+            #innerWrapDiv > div:nth-child(1) {
+                position: relative !important;
+            }
+
+            /* FORM MARKETO */
+            .mktoForm .mktoFieldWrap {
+                width: 100%;
+            }
+
+            .marketo-forms .mktoForm .mktoCheckboxList input,
+            .marketo-forms .mktoForm .mktoRadioList input,
+            .marketo-forms .mktoForm .mktoRequiredField .mktoAsterix {
+                display: inline-block !important;
+                width: auto !important;
+            }
+
+            .mktoForm .mktoFormCol {
+                width: 100%;
+            }
+
+            .mktoForm .mktoRequiredField label.mktoLabel {
+                font-weight: bold !important;
+                margin-top: 0;
+                font-size: 16px !important;
+                width: 100% !important;
+            }
+
+            .mktoForm input[type="text"],
+            .mktoForm input[type="url"],
+            .mktoForm input[type="email"],
+            .mktoForm input[type="tel"],
+            .mktoForm input[type="number"],
+            .mktoForm input[type="date"],
+            .mktoForm textarea.mktoField,
+            .mktoForm select.mktoField {
+                margin-bottom: 5px !important;
+            }
+
+            .mktoForm .mktoOffset,
+            .marketo-forms .mktoForm .mktoGutter,
+            .marketo-forms .mktoForm .mktoOffset,
+            .mktoForm .mktoGutter {
+                display: none;
+            }
+
+            input#GlobalPRM_MSP_Agree_to_MSP_terms__c {
+                height: 15px;
+                width: 15px !important;
+                margin: 0;
+            }
+
+            .mktoForm .mktoRadioList,
+            .mktoForm .mktoCheckboxList {
+                position: absolute;
+                left: -4px;
+                top: 0px;
+                height: 16px;
+                width: 16px;
+                margin: 0;
+            }
+
+            .mktoForm .mktoRadioList,
+            .mktoForm .mktoCheckboxList {
+                height: 24px;
+            }
+
+            .mktoForm input[type="text"],
+            .mktoForm input[type="url"],
+            .mktoForm input[type="email"],
+            .mktoForm input[type="tel"],
+            .mktoForm input[type="number"],
+            .mktoForm input[type="date"],
+            .mktoForm textarea.mktoField,
+            .mktoForm select.mktoField {
+                padding: 5px 15px !important ;
+                height: 40px !important;
+            }
+
+            .marketo-forms .mktoField[type="checkbox"]:checked + label::after {
+                content: "\2713";
+                background-color: var(--clr-red-400) !important;
+            }
+
+            .mktoForm .mktoRadioList,
+            .mktoForm
+                .mktoCheckboxList.mktoValid
+                input#GlobalPRM_MSP_Agree_to_MSP_terms__c:checked {
+                background: var(--clr-red-400) no-repeat !important;
+                background-size: 16px !important;
+                background-position: center !important;
+            }
+
+            label#LblGlobalPRM_MSP_Agree_to_MSP_terms__c {
+                text-indent: 36px !important;
+                font-size: 14px !important;
+                line-height: 1.4;
+            }
+
+            label#LblGlobalPRM_MSP_Agree_to_MSP_terms__c .mktoAsterix {
+                left: 21px;
+            }
+
+            .mktoForm .mktoRequiredField .mktoAsterix {
+                display: block;
+                position: absolute;
+                top: 3px;
+                width: 20px;
+                left: 0;
+                text-indent: 0;
+            }
+
+            .mktoFieldWrap.mktoRequiredField label {
+                text-indent: 20px !important;
+            }
+
+            section.section02 form label {
+                display: inline-block;
+                max-width: 100%;
+                margin-bottom: 5px;
+                font-weight: 700;
+            }
+
+            section.section04 .text {
+                font-size: 1.7rem;
+            }
+
+            section.section02 form input,
+            section.section02 form select {
+                width: 100%;
+                height: 45px;
+                border-radius: 6px;
+                background: #e7e8e8 !important;
+                border: unset;
+                font-weight: 300;
+                font-size: 18px;
+                line-height: 1.2;
+                text-align: left;
+                color: #b9b9b9 !important;
+                padding: 0 25px;
+                margin-bottom: 20px;
+                outline: unset;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+            }
+
+            section.section02 form input::placeholder,
+            section.section02 form select::placeholder,
+            section.section02 form select option,
+            section.section02 form select {
+                color: #000 !important;
+            }
+
+            section.section02 form select {
+                background: #e7e8e8
+                    url("https://resources.trendmicro.com/rs/945-CXD-062/images/select.svg")
+                    no-repeat !important;
+                background-position: 97% center !important;
+                background-size: 10px !important;
+                width: 100% !important;
+            }
+
+            section.section02 form input {
+                width: 100% !important;
+            }
+
+            section.section02 .conjunto-form form label {
+                text-indent: 2.3rem;
+                font-size: 1rem;
+                position: relative;
+                font-weight: 300;
+                font-size: 15px;
+                line-height: 24px;
+                text-align: left;
+                color: #1c1c1c;
+                margin-top: 20px;
+                width: 100% !important;
+                font-family: "Interstate", sans-serif !important;
+            }
+
+            .mktoForm .mktoError .mktoErrorMsg {
+                width: fit-content;
+            }
+
+            /* section 02 */
+            section.section02 input#agree {
+                width: 20px;
+                height: 20px;
+                margin-bottom: 0;
+                padding: 2px;
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            .mktoButtonRow {
+                width: 100%;
+            }
+
+            .mktoButton {
+                display: block !important;
+                font-family: "Interstate", sans-serif !important;
+                font-size: 17px !important;
+                font-weight: bold !important;
+                width: 100% !important;
+                text-align: center !important;
+                border-radius: 6px !important;
+                color: var(--clr-neutral-light);
+                cursor: pointer;
+                text-decoration: unset !important;
+                margin: 25px ​0 0 !important;
+                padding: 12px 0 !important;
+                transition-duration: 0.3s;
+                -webkit-appearance: unset !important;
+                border: 1px solid #d71a22 !important;
+                background-color: #d71a22 !important;
+                background-image: -webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    from(#d71a22),
+                    to(#d71a22)
+                ) !important;
+                background-image: -webkit-linear-gradient(
+                    top,
+                    #d71a22,
+                    #d71a22
+                ) !important;
+                background-image: -moz-linear-gradient(
+                    top,
+                    #d71a22,
+                    #d71a22
+                ) !important;
+                background-image: linear-gradient(
+                    to bottom,
+                    #d71a22,
+                    #d71a22
+                ) !important;
+            }
+
+            .mktoButton:hover {
+                border: 1px solid #690d10 !important;
+                background-color: #690d10 !important;
+                background-image: -webkit-gradient(
+                    linear,
+                    left top,
+                    left bottom,
+                    from(#690d10),
+                    to(#690d10)
+                ) !important;
+                background-image: -webkit-linear-gradient(
+                    top,
+                    #690d10,
+                    #690d10
+                ) !important;
+                background-image: -moz-linear-gradient(
+                    top,
+                    #690d10,
+                    #690d10
+                ) !important;
+                background-image: linear-gradient(
+                    to bottom,
+                    #690d10,
+                    #690d10
+                ) !important;
+                transition-duration: 0.3s;
+            }
+
+            .mktoForm .mktoError {
+                left: 0;
+                bottom: -30px !important;
+            }
+
+            .mktoForm .mktoRequiredField .mktoAsterix {
+                display: block !important;
+                font-weight: bold;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+        <noscript
+            ><iframe
+                src="https://www.googletagmanager.com/ns.html?id=GTM-W9G8FN9"
+                height="0"
+                width="0"
+                style="display: none; visibility: hidden"
+            ></iframe
+        ></noscript>
+        <!-- End Google Tag Manager (noscript) -->
+        <!-- Start Header -->
+        <header class="header" id="header">
+            <div class="container header__container">
+                <img
+                    src="https://resources.trendmicro.com/rs/945-CXD-062/images/logo_visionone.png"
+                    alt="Trend Micro Logo"
+                    class="header__logo"
+                />
+                <h1 class="header__title clr-red">
+                    Trend Micro Vision One:
+                    <span></span>
+                    simplifique e acelere a investigação e resposta contra
+                    ameaças <span></span>
+                    cibernéticas avançadas
+                </h1>
+                <p class="header__text">
+                    Com essa plataforma criada exclusivamente para detecção e
+                    resposta você garante proteção contra ataques virtuais acima
+                    das soluções típicas XDR
+                </p>
+            </div>
+        </header>
+        <!-- End Header -->
+        <main class="main" id="main">
+            <!-- Start Section 01 -->
+            <section class="section__first section02">
+                <div class="section__first--content">
+                    <p>
+                        Nunca foi tão importante proteger os dados da empresa
+                        contra ameaças e vulnerabilidades cibernéticas. Por
+                        isso, é importante contar com soluções eficientes que
+                        maximizem a segurança corporativa de sua organização.
+                    </p>
+                    <p>
+                        Com a Trend Micro, você une os mais avançados mecanismos
+                        de aprendizado de máquina a técnicas eficientes de
+                        detecção e protege sua empresa contra ameaças
+                        cibernéticas em todos os níveis de criticidade.
+                    </p>
+                    <p>
+                        100% SaaS, nossas soluções oferecem avançadas camadas de
+                        proteção que garantem, não apenas mais segurança para
+                        sua organização, como mais performance para sua equipe
+                        de TI.
+                    </p>
+                    <p class="bold">
+                        Fale com um consultor e encontre a melhor opção para sua
+                        empresa.
+                    </p>
+                </div>
+                <div
+                    class="section__first--form-container form"
+                    id="form__container"
+                >
+                    <h2>
+                        <strong class="bold">Envie seus dados</strong>
+                        <br />
+                        Retornaremos em breve.
+                    </h2>
+                    <form id="mktoForm_22291"></form>
+                </div>
+            </section>
+
+            <!-- End Section 01 -->
+
+            <!-- Start Section 02 -->
+            <section class="section__second">
+                <div class="container section__second--container">
+                    <header>
+                        <span>Trend Micro</span>
+                        <h2 class="clr-red bold">
+                            Vision One: Veja mais. <br />
+                            Responda mais rápido.
+                        </h2>
+                        <p>
+                            Desenvolvemos soluções capazes de potencializar ao
+                            máximo a gestão de TI de sua empresa contra as mais
+                            avançadas ameaças e vulnerabilidades cibernéticas.
+                            Veja abaixo:
+                        </p>
+                    </header>
+
+                    <main class="section__second--cards">
+                        <article class="section__second--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-detecte.png"
+                                alt="Computador ao fundo com símbolo de adição no topo e um celular à frente."
+                            />
+                            <h3 class="bold">
+                                Detecte e responda em um único lugar
+                            </h3>
+                            <p>
+                                Conecte e-mails, endpoints, servidores, nuvens e
+                                redes para obter uma perspectiva mais ampla
+                                sobre todas as cadeias de eventos em um único
+                                lugar.
+                            </p>
+                        </article>
+
+                        <article class="section__second--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-visibilidade.png"
+                                alt="Processador de computador ao fundo, lupa à frente."
+                            />
+                            <h3 class="bold">
+                                Aumente a visibilidade do risco
+                            </h3>
+                            <p>
+                                Responda de forma mais rápida e eficiente
+                                através de detecções de chaves, endpoints com
+                                técnicas de ataque observáveis, listas
+                                priorizadas de dispositivos e usuários
+                                arriscados e uso não autorizado de aplicativos
+                                em nuvem.
+                            </p>
+                        </article>
+
+                        <article class="section__second--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-check_visionone.png"
+                                alt="Lista de afarezes com duas marcas de conclusão ao lado."
+                            />
+                            <h3 class="bold">
+                                Gerencie suas políticas com flexibilidade
+                            </h3>
+                            <p>
+                                O insight baseado no XDR permite que você ajuste
+                                os parâmetros de política de produto aplicáveis
+                                para otimizar as defesas conforme necessário.
+                            </p>
+                        </article>
+
+                        <article class="section__second--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-integre.png"
+                                alt="Linhas e pequenas bolinhas sinalizando integração."
+                            />
+                            <h3>Integre soluções ao nosso sistema aberto</h3>
+                            <p>
+                                Permitimos que os parceiros de tecnologia
+                                integrem soluções de segurança complementares às
+                                nossas ofertas e fornecemos validação de
+                                interoperabilidade para a combinação.
+                            </p>
+                        </article>
+                    </main>
+                    <footer class="section__second--footer">
+                        <a
+                            class="btn section__second--button"
+                            href="#form__container"
+                        >
+                            Fale com um consultor
+                        </a>
+                    </footer>
+                </div>
+            </section>
+            <!-- End Section 02 -->
+
+            <!-- Start Section 03 -->
+            <section class="section__third">
+                <div class="container section__third--container">
+                    <header class="section__third--header">
+                        <h2 class="clr-red bold">
+                            Neutralize ameaças automaticamente e proteja sua
+                            empresa contra todos os tipos de ciberataques
+                        </h2>
+                        <p>
+                            Diante de um cenário de ameaças cibernéticas em
+                            constante mudança e evolução, fica evidente a
+                            necessidade de uma segurança da informação eficaz e
+                            que seja capaz de neutralizar riscos e
+                            vulnerabilidades em todas as instâncias. Por isso,
+                            com a Trend Micro você garante:
+                        </p>
+                    </header>
+                    <main class="section__third--main">
+                        <article class="section__third--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-plataforma.png"
+                                alt="Silhueta de pessoa à frente de um computador. "
+                            />
+                            <p>
+                                Plataforma de gestão de endpoints em uma única
+                                tela
+                            </p>
+                        </article>
+
+                        <article class="section__third--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-ameaca.png"
+                                alt="Silhueta de uma pessoa ao fundo, com um escudo simbolizando proteção na parte da frente."
+                            />
+                            <p>
+                                Técnicas avançadas de detecção e resposta de
+                                ameaças
+                            </p>
+                        </article>
+
+                        <article class="section__third--card">
+                            <img
+                                src="https://resources.trendmicro.com/rs/945-CXD-062/images/icon-shield.png"
+                                alt="Escudo simbolizando proteção com o logo da empresa ao centro."
+                            />
+                            <p>
+                                Correlação automática de dados alimentada por IA
+                            </p>
+                        </article>
+                    </main>
+
+                    <footer class="section__third--footer">
+                        <a
+                            href="#form__container"
+                            class="btn section__third--button"
+                        >
+                            Fale com um consultor
+                        </a>
+                    </footer>
+                </div>
+            </section>
+            <!-- End Section 03 -->
+
+            <!-- Start Section 04 -->
+            <section class="section__fourth">
+                <div class="container section__fourth--container">
+                    <div class="section__fourth--image">
+                        <img
+                            src="https://resources.trendmicro.com/rs/945-CXD-062/images/homens-laptop_visionone.png"
+                            alt="Dois homens sentado em frente à uma mesa olhando para a tela de um computador discutindo resultados."
+                        />
+                    </div>
+
+                    <div class="section__fourth--content">
+                        <h2 class="bold">Por que confiar na Trend Micro?</h2>
+                        <p>
+                            A Trend Micro, líder global em cibersegurança, ajuda
+                            a tornar o mundo seguro para a troca de informações
+                            digitais. A Trend Micro atende clientes brasileiros
+                            há mais de 20 anos, com expertise em prevenção e
+                            detecção de ameaças.
+                        </p>
+                        <p>
+                            Impulsionada por décadas de experiência em
+                            segurança, pesquisa de ameaças globais e inovação
+                            contínua, nossa plataforma de cibersegurança protege
+                            mais de <strong>500.000 organizações</strong> e mais
+                            de <strong>250 milhões de indivíduos</strong> em
+                            nuvens, redes, dispositivos e endpoints.
+                        </p>
+                        <p>
+                            Como uma
+                            <strong
+                                >líder em segurança de nuvem e empresas</strong
+                            >, nossa plataforma oferece visibilidade central
+                            para uma melhor, mais rápida detecção e resposta e
+                            uma poderosa gama de técnicas avançadas de defesa de
+                            ameaças otimizadas para ambientes, como a
+                            <strong>AWS, a Microsoft e o Google</strong>.
+                        </p>
+                        <a
+                            href="https://www.trendmicro.com/pt_br/about/customer-stories.html?_ga=2.86608152.1063071370.1639082661-29483233.1638989374"
+                            rel="nofollow noreferrer"
+                            target="_blank"
+                            class="btn section__fourth--btn uppercase"
+                            >Leia Nossas Histórias de Sucesso</a
+                        >
+                    </div>
+                </div>
+            </section>
+            <!-- End Section 04 -->
+
+            <!-- Start Footer -->
+            <footer class="footer" id="footer">
+                <p>
+                    Copyright &copy; 2021 Trend Micro Incorporated. Todos os
+                    direitos reservados.
+                </p>
+            </footer>
+        </main>
+
+        <!-- JS -->
+        <script src="https://resources.trendmicro.com/rs/945-CXD-062/images/scriptform.js"></script>
+
+        <script>
+            $(".mktoButton").html("Fale com um consultor");
+        </script>
+    </body>
+</html>

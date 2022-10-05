@@ -1,0 +1,254 @@
+:root {
+    --spacing: 3rem;
+    --white: #fff;
+    --light-gray: #f2f2f2;
+    --black: #1c1c1c;
+    --red: #d71921;
+    --ff-primary: "Interstate", sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    line-height: 1.5;
+    margin: 0;
+}
+
+@font-face {
+    font-family: "Interstate";
+    font-display: swap;
+    src: url("../../fonts/INTERSTATE-EXTRALIGHT.OTF");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Interstate";
+    font-display: swap;
+    src: url("../../fonts/interstate-regular.otf");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Interstate";
+    font-display: swap;
+    src: url("../../fonts/INTERSTATE-BOLD.OTF");
+    font-weight: 700;
+}
+:root {
+    --spacing: 3rem;
+    --white: #fff;
+    --light-gray: #f2f2f2;
+    --black: #1c1c1c;
+    --red: #d71921;
+    --ff-primary: "Interstate", sans-serif;
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+@media (min-width: 45em) {
+    :root {
+        --spacing: 4.5rem;
+    }
+}
+@media (min-width: 70em) {
+    :root {
+        --spacing: 6rem;
+    }
+}
+html {
+    font-size: 87.5%;
+}
+@media (min-width: 45em) {
+    html {
+        font-size: 93.75%;
+    }
+}
+@media (min-width: 60em) {
+    html {
+        font-size: 100%;
+    }
+}
+
+* {
+    font-family: var(--ff-primary);
+}
+
+body {
+    font-family: var(--ff-primary);
+    min-height: 100vh;
+}
+
+div#innerWrapDiv {
+    width: 100%;
+    max-width: 100vw !important;
+    height: 100vh !important;
+}
+
+#innerWrapDiv > div:nth-child(2) {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+.container {
+    width: 100%;
+    padding-inline: 5%;
+    max-width: 80em;
+    margin-inline: auto;
+}
+
+/* ----------------------- MAIN -----------------------------*/
+body {
+    display: grid;
+    grid-template-rows: 1fr max-content;
+}
+
+.main {
+    color: var(--white);
+    background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/adaptacao__mr--bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    padding-bottom: var(--spacing);
+
+    background-color: #212121d7;
+    background-blend-mode: multiply;
+    background-position-x: 75%;
+}
+
+.main img {
+    margin-top: var(--spacing);
+    margin-bottom: calc(var(--spacing) * 2);
+
+    max-width: 15rem;
+}
+
+@media (min-width: 45em) {
+    .main {
+        background-color: #212121b7;
+        background-position-x: center;
+    }
+
+    .main img {
+        margin-bottom: calc(var(--spacing) * 1.25);
+    }
+}
+
+@media (min-width: 70em) {
+    .main {
+        background-blend-mode: unset;
+    }
+
+    .main img {
+        margin-bottom: calc(var(--spacing) * 0.8);
+    }
+}
+
+.main h1 {
+    max-width: 20ch;
+    line-height: 1.3;
+    font-size: 1.75rem;
+}
+
+.main h1 span {
+    color: var(--red);
+}
+
+.main p {
+    font-size: 1.25rem;
+    max-width: 38ch;
+    line-height: 1.6;
+    margin-block: 2.5rem;
+}
+
+@media (max-width: 375px) {
+    .main h1 {
+        font-size: 1.5rem;
+    }
+
+    .main p {
+        font-size: 1rem;
+    }
+}
+
+.main a {
+    display: block;
+    font-size: 1.125rem;
+    background-color: var(--red);
+    color: var(--white);
+    font-weight: var(--fw-bold);
+    min-width: 15em;
+    text-align: center;
+    max-width: max-content;
+    padding: 0.85em 2em;
+    border-radius: 99999px;
+    text-transform: uppercase;
+    transition: all 500ms ease;
+}
+
+.main a:hover,
+.main a:focus {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+@media (min-width: 45em) {
+    .main h1 {
+        font-size: 2.65rem;
+    }
+
+    .main p {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 70em) {
+    .main h1 {
+        font-size: 2.75rem;
+    }
+
+    .main p {
+        font-size: 1.5rem;
+    }
+}
+
+/* ----------------------- FOOTER -----------------------------*/
+.footer {
+    background-color: #000;
+    color: var(--white);
+    font-size: 0.85rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+    font-weight: var(--fw-light);
+}
+.footer__container {
+    padding-block: 1.15rem;
+}

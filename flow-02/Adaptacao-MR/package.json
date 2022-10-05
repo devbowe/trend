@@ -1,0 +1,6 @@
+{
+    "author": "Pedro | Bowe",
+    "scripts": {
+        "dev": "sass --watch css/main.scss css/style.css"
+    }
+}

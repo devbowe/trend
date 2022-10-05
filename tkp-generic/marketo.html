@@ -1,0 +1,212 @@
+<!-- Favicon -->
+<link
+    rel="shortcut icon"
+    href="https://resources.trendmicro.com/rs/945-CXD-062/images/trendmicro-favicon.png"
+    type="image/png"
+/>
+
+<style>
+    @font-face {
+        font-family: "Interstate";
+        font-display: swap;
+        src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-EXTRALIGHT.OTF");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "Interstate";
+        font-display: swap;
+        src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-BOLD.OTF");
+        font-weight: 700;
+    }
+
+    *,
+    ::after,
+    ::before {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    html {
+        scroll-behavior: smooth;
+        font-size: 87.35%;
+    }
+    @media (min-width: 45em) {
+        html {
+            font-size: 93.5%;
+        }
+    }
+    @media (min-width: 70em) {
+        html {
+            font-size: 100%;
+        }
+    }
+    @media (min-width: 100em) {
+        html {
+            font-size: 110%;
+        }
+    }
+    body {
+        min-height: 100vh;
+        text-rendering: optimizeSpeed;
+        line-height: 1.5;
+
+        overflow-x: hidden;
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+    }
+    img {
+        max-width: 100%;
+        display: block;
+    }
+    button {
+        font: inherit;
+        cursor: pointer;
+    }
+    :root {
+        --ff-primary: "Interstate", sans-serif;
+        --clr-neutral-light: #ffffff;
+        --clr-red: #d71a22;
+        --footer-bg: #4d4d4f;
+        --body-bg: #21212186;
+        --fw-bold: 700;
+        --fw-regular: 400;
+        --fw-light: 300;
+    }
+    * {
+        font-family: var(--ff-primary);
+    }
+    .container {
+        max-width: 1920px;
+        width: 90%;
+        margin-inline: auto;
+    }
+    .btn {
+        border: none;
+        outline: 0;
+        display: inline-block;
+        border-radius: 6px;
+        padding: 0.75em 3em;
+        color: var(--clr-neutral-light);
+        background-color: var(--clr-red);
+        font-weight: 700;
+        font-size: 1rem;
+        text-align: center;
+        transition: filter 0.3s ease;
+    }
+    .btn:focus,
+    .btn:hover {
+        filter: brightness(0.8);
+    }
+    .wrapper {
+        min-height: 100vh;
+        width: 100vw;
+        background-color: var(--body-bg);
+        background-image: url(https://resources.trendmicro.com/rs/945-CXD-062/images/bg_tkp.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: multiply;
+        color: var(--clr-neutral-light);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr max-content;
+        gap: 5em;
+        grid-template-areas: "main" "footer";
+    }
+
+    @media (min-width: 45em) {
+        :root {
+            --body-bg: #21212123;
+        }
+    }
+    .container {
+        grid-area: main;
+    }
+    .tkp__footer {
+        grid-area: footer;
+    }
+    .tkp__header {
+        --spacing-header: 5em;
+        padding-top: var(--spacing-header);
+        margin-bottom: var(--spacing-header);
+    }
+    .tkp__header--image {
+        max-width: 12.5rem;
+        margin-bottom: var(--spacing-header);
+    }
+    .tkp__header--title {
+        font-size: clamp(1.45rem, calc(1rem + 4vw), 2.85rem);
+        line-height: 1.2;
+        font-weight: var(--fw-bold);
+        margin-bottom: 0.25em;
+    }
+    .tkp__header--text {
+        font-size: clamp(1.15, calc(1rem + 5vw), 1.35rem);
+        font-weight: var(--fw-light);
+    }
+    .tkp__main {
+        display: flex;
+        flex-direction: column;
+        gap: 1.75em;
+        align-items: flex-start;
+        max-width: 40ch;
+    }
+    .tkp__main p:first-child {
+        font-weight: 700;
+    }
+    .tkp__footer {
+        display: grid;
+        place-items: center;
+        background-color: var(--footer-bg);
+        color: var(--clr-neutral-light);
+        font-size: 0.875rem;
+        padding: 2em 1.5em;
+        text-align: center;
+    }
+    div#innerWrapDiv {
+        width: 100% !important;
+        height: 100vh !important;
+    }
+    #innerWrapDiv > div:nth-child(1) {
+        position: relative !important;
+    }
+</style>
+
+<div class="wrapper">
+    <div class="container">
+        <header class="tkp__header">
+            <img
+                src="https://resources.trendmicro.com/rs/945-CXD-062/images/trend_logo_white.png"
+                alt="Trend Micro"
+                class="tkp__header--image"
+            />
+
+            <h1 class="tkp__header--title">Agradecemos pela confiança.</h1>
+            <p class="tkp__header--text">
+                Em breve nosso time de especialistas entrará em contato.
+            </p>
+        </header>
+
+        <main class="tkp__main">
+            <p>Já conhece a Trend Micro?</p>
+            <p>
+                Saiba como nossas soluções podem potencializar a cibersegurança
+                de sua organização.
+            </p>
+            <a
+                href="https://www.trendmicro.com/pt_br/business/products.html"
+                class="btn"
+                >Ver Soluções</a
+            >
+        </main>
+    </div>
+    <footer class="tkp__footer">
+        <p>
+            Copyright &copy; 2021 Trend Micro Incorporated. Todos os direitos
+            reservados.
+        </p>
+    </footer>
+</div>

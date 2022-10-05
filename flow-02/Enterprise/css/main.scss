@@ -1,0 +1,365 @@
+@use "reset";
+@use "global";
+@use "form";
+
+/* ----------------------- HEADER -----------------------------*/
+.header {
+    background-color: var(--black);
+    color: var(--white);
+
+    background-size: cover;
+    background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/enterprise__bg.png");
+    background-position: left;
+    background-repeat: no-repeat;
+
+    @media (min-width: 45em) {
+        background-position: center;
+    }
+
+    &__container {
+        padding-block: var(--spacing);
+
+        img {
+            max-width: 15rem;
+            padding-bottom: var(--spacing);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-block: 2rem;
+        }
+
+        ul {
+            display: grid;
+            gap: 0.35rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1.125rem;
+
+                &::before {
+                    content: "";
+                    width: 6px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: var(--red);
+                }
+            }
+        }
+
+        a {
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 40em) {
+            h1 {
+                max-width: 28ch;
+                font-size: 2rem;
+            }
+
+            p {
+                max-width: 55ch;
+            }
+        }
+
+        @media (min-width: 70em) {
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+}
+
+/* ----------------------- MAIN CONTENT -----------------------------*/
+.solutions {
+    padding-block: var(--spacing);
+
+    &__container {
+        h2 {
+            font-size: 1.25rem;
+            line-height: 1.2;
+            text-align: center;
+            max-width: 50ch;
+            margin-inline: auto;
+
+            @media (min-width: 45em) {
+                font-size: 1.75rem;
+            }
+        }
+
+        .cards {
+            --breakpoint: 65em;
+
+            margin-block: 3rem;
+            display: grid;
+            gap: 2rem;
+
+            @media (min-width: 65em) {
+                grid-template-columns: repeat(3, 1fr);
+                margin-block: 5rem;
+            }
+
+            @media (min-width: 75em) {
+                gap: 4rem;
+            }
+        }
+
+        .card {
+            display: grid;
+            grid-template-rows: max-content max-content 1fr max-content;
+
+            background-color: var(--light-gray);
+            padding: 1.5rem;
+            border-radius: 25px;
+
+            max-width: 30rem;
+            margin-inline: auto;
+
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+                rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+
+            h3 {
+                font-weight: 700;
+                font-size: 1.25rem;
+                margin-bottom: 0.75rem;
+            }
+
+            span {
+                border: 1px solid var(--red);
+                padding: 0.5em 1em;
+                display: block;
+                max-width: max-content;
+                border-radius: 9999px;
+                margin-bottom: 1.5rem;
+            }
+
+            p {
+                margin-bottom: 1.75rem;
+                font-size: 1.125rem;
+            }
+
+            a {
+                text-decoration: underline;
+                color: var(--red);
+            }
+
+            &:nth-child(2) {
+                @media (min-width: 65em) {
+                    transform: translateY(25px);
+                }
+
+                // background-color: #302e2b;
+                // color: #fff;
+            }
+        }
+
+        > a {
+            display: grid;
+            margin-inline: auto;
+            max-width: max-content;
+        }
+    }
+}
+
+.map {
+    padding-block: var(--spacing);
+    color: var(--white);
+
+    background-color: #00000050;
+    background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/map__bg.png");
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 3rem;
+
+        @media (min-width: 50em) {
+            gap: 5rem;
+        }
+
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-inline: auto;
+            max-width: 50ch;
+
+            @media (min-width: 45em) {
+                font-size: 1.65rem;
+            }
+        }
+    }
+}
+
+.awards {
+    padding-block: var(--spacing);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        .content {
+            text-align: center;
+
+            h2 {
+                margin-bottom: 1.25rem;
+                max-width: 30ch;
+                margin-inline: auto;
+            }
+        }
+
+        .selos {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            gap: 4rem;
+
+            margin-inline: auto;
+            margin-top: 5rem;
+
+            > * {
+                max-width: 6rem;
+            }
+        }
+
+        @media (min-width: 50em) {
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: space-between;
+            gap: 5rem;
+
+            .content {
+                text-align: right;
+
+                h2 {
+                    margin-bottom: 1.5rem;
+                }
+            }
+
+            .selos {
+                margin: 0;
+                gap: 3rem;
+                column-gap: 5rem;
+                > * {
+                    max-width: 7rem;
+                }
+            }
+        }
+
+        @media (min-width: 1130px) {
+            .selos {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+    }
+}
+
+.contact {
+    background-color: var(--black);
+    color: var(--white);
+
+    &__container {
+        display: grid;
+
+        @media (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    .content {
+        max-width: 45em;
+        padding-inline: 5%;
+        padding-block: var(--spacing);
+        margin-inline: auto;
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .image {
+        background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/enterprise__foto02.png");
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// MARKETO BUTTON
+.mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    width: 100% !important;
+    padding: 0.75em 2em !important;
+
+    color: var(--white);
+    font-weight: 500 !important;
+    font-size: 1.125rem !important;
+    border-radius: 9999px;
+
+    background-color: var(--red) !important;
+
+    background-image: none !important;
+    border: none !important;
+
+    &:hover,
+    &:focus {
+        transition: all 300ms ease;
+        filter: brightness(0.7);
+    }
+}
+
+.mktoForm .mktoError .mktoErrorMsg {
+    background-image: none !important;
+    background-color: var(--red) !important;
+    border: none !important;
+    text-shadow: none !important;
+    font-weight: 600 !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: rgb(0 0 0 / 65%) 0 2px 7px, inset var(--red) 0 1px 0px !important;
+}
+
+.mktoForm .mktoError .mktoErrorArrow {
+    background-color: var(--red) !important;
+    border: 1px solid var(--red) !important;
+}
+
+/* ----------------------- FOOTER -----------------------------*/
+.footer {
+    background-color: #000;
+    color: var(--white);
+    font-size: 0.85rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+    &__container {
+        padding-block: 1rem;
+    }
+}

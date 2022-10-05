@@ -1,0 +1,156 @@
+// @font-face {
+//     font-family: "Interstate";
+//     font-display: swap;
+//     src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-EXTRALIGHT.OTF");
+//     font-weight: 400;
+// }
+
+@font-face {
+    font-family: "Interstate";
+    font-display: swap;
+    src: url("../../fonts/INTERSTATE-EXTRALIGHT.OTF");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Interstate";
+    font-display: swap;
+    src: url("../../fonts/interstate-regular.otf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Interstate";
+    font-display: swap;
+    src: url("../../fonts/INTERSTATE-BOLD.OTF");
+    font-weight: 700;
+}
+
+:root {
+    --spacing: 3rem;
+
+    --white: #fff;
+    --light-gray: #f5f4f4;
+    --black: #1c1c1c;
+    --red: #d71921;
+
+    --ff-primary: "Interstate", sans-serif;
+
+    --fw-light: 300;
+    --fw-regular: 400;
+    --fw-bold: 700;
+}
+
+@media (min-width: 45em) {
+    :root {
+        --spacing: 4.5rem;
+    }
+}
+
+@media (min-width: 70em) {
+    :root {
+        --spacing: 6rem;
+    }
+}
+
+html {
+    font-size: 87.5%;
+
+    @media (min-width: 45em) {
+        font-size: 93.75%;
+    }
+
+    @media (min-width: 60em) {
+        font-size: 100%;
+    }
+}
+
+body {
+    font-family: var(--ff-primary);
+    min-height: 100vh;
+}
+
+div#innerWrapDiv {
+    width: 100%;
+    max-width: 100vw !important;
+    height: 100vh !important;
+}
+#innerWrapDiv > div:nth-child(2) {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+}
+
+.container {
+    width: 100%;
+    padding-inline: 5%;
+    max-width: 90em;
+    margin-inline: auto;
+}
+
+.container {
+    width: 100%;
+    padding-inline: 5%;
+    max-width: 90em;
+    margin-inline: auto;
+}
+
+.btn {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    min-width: 10rem;
+    padding: 0.75em 2em;
+
+    color: var(--white);
+    background-color: var(--red);
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 1rem;
+    border-radius: 9999px;
+
+    &:hover,
+    &:focus {
+        background-color: var(--black);
+        transition: all 300ms ease;
+        color: var(--white);
+    }
+
+    &.dark {
+        background-color: var(--black);
+
+        &:hover,
+        &:focus {
+            background-color: var(--red);
+        }
+    }
+
+    &.lowe {
+        text-transform: lowercase;
+    }
+
+    &.bold {
+        font-weight: 600;
+    }
+}
+
+.span--bg {
+    background-color: var(--red);
+    color: var(--white);
+    padding: 0.15em;
+}
+
+.span--color {
+    color: var(--red);
+}
+
+.thin {
+    font-weight: 300;
+}
+
+.bold {
+    font-weight: 700;
+}

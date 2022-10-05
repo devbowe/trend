@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <!-- GTM -->
+        <script>
+            (function (w, d, s, l, i) {
+                w[l] = w[l] || [];
+                w[l].push({
+                    "gtm.start": new Date().getTime(),
+                    event: "gtm.js",
+                });
+                var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s),
+                    dl = l != "dataLayer" ? "&l=" + l : "";
+                j.async = true;
+                j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+                f.parentNode.insertBefore(j, f);
+            })(window, document, "script", "dataLayer", "GTM-W9G8FN9");
+        </script>
+
+        <!-- Favicon -->
+        <link
+            rel="shortcut icon"
+            href="https://resources.trendmicro.com/rs/945-CXD-062/images/favicon.png"
+            type="image/png"
+        />
+
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Space+Grotesk:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- Meta -->
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Agradecemos pelo interesse no Trend Micro Cloud One. Em breve, um de nossos consultores especializados entrará em contato."
+        />
+
+        <title>Agradecimento | Trend Micro (BR) | Cloud One</title>
+
+        <!-- Styles -->
+        <!-- <link rel="stylesheet" href="css/style.css" /> -->
+    </head>
+    <body>
+        <!-- MARKETO TP -->
+        <style>
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            html {
+                scroll-behavior: smooth;
+            }
+            body {
+                min-height: 100vh;
+                text-rendering: optimizeSpeed;
+                line-height: 1.5;
+            }
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
+            ul,
+            li {
+                list-style: none;
+            }
+            img {
+                max-width: 100%;
+                display: block;
+            }
+            input,
+            button,
+            textarea,
+            select {
+                font: inherit;
+            }
+            @font-face {
+                font-family: "Interstate";
+                font-display: swap;
+                src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-EXTRALIGHT.OTF");
+                font-weight: 300;
+            }
+            @font-face {
+                font-family: "Interstate";
+                font-display: swap;
+                src: url("https://resources.trendmicro.com/rs/945-CXD-062/images/INTERSTATE-BOLD.OTF");
+                font-weight: 700;
+            }
+            :root {
+                --spacing: 4rem;
+                --white: #fff;
+                --gray-light: #b5b5b5;
+                --gray-medium: #545454;
+                --gray-dark: #1e1e1e;
+                --black: #000;
+                --clr-accent: #fa121c;
+                --ff-trend-bold: "Interstate Bold Cond", "Montserrat",
+                    sans-serif;
+                --ff-trend-regular: "Interstate Regular Comp",
+                    "Montserrat" sans-serif;
+                --ff-mont: "Montserrat", sans-serif;
+                --ff-space: "Space Grotesk", sans-serif;
+            }
+            @media (min-width: 45em) {
+                :root {
+                    --spacing: 5rem;
+                }
+            }
+            @media (min-width: 70em) {
+                :root {
+                    --spacing: 5.5rem;
+                }
+            }
+            * {
+                font-family: var(--ff-mont);
+            }
+            html {
+                font-size: 93.75%;
+            }
+            @media (min-width: 45em) {
+                html {
+                    font-size: 100%;
+                }
+            }
+            body {
+                color: var(--white);
+                background-color: var(--gray-dark);
+            }
+            .container {
+                width: min(90%, 80rem);
+                margin-inline: auto;
+            }
+            .spacing {
+                padding-block: var(--spacing);
+            }
+            .btn {
+                font-size: 1rem;
+                padding: 0.75rem 1rem;
+                background: var(--clr-accent);
+                color: var(--white);
+                font-weight: 700;
+                border-radius: 0.625em;
+                font-family: var(--ff-mont);
+                min-width: 20rem;
+                text-align: center;
+                text-transform: uppercase;
+                display: grid;
+                max-width: max-content;
+            }
+            .btn.center {
+                margin-inline: auto;
+            }
+            .btn:hover,
+            .btn:focus {
+                transition: all 200ms ease;
+                filter: brightness(1.1);
+            }
+            .section-title {
+                font-size: clamp(1.75rem, 3.5vw, 2rem);
+                line-height: 1.4;
+                margin-bottom: 2rem;
+                max-width: 35ch;
+                font-weight: 700;
+                color: var(--white);
+                text-align: center;
+                margin-inline: auto;
+            }
+            .section-title::before {
+                content: "";
+                display: block;
+                background-color: var(--clr-accent);
+                width: 80px;
+                height: 4px;
+                border-radius: 100vmax;
+                margin-inline: auto;
+                margin-bottom: 1.5rem;
+            }
+            @media (min-width: 70em) {
+                .section-title {
+                    margin-bottom: 2.15rem;
+                }
+            }
+            .ff-trend-bold {
+                font-family: var(--ff-trend-bold);
+            }
+            .ff-trend-regular {
+                font-family: var(--ff-trend-regular);
+            }
+            .ff-mont {
+                font-family: var(--ff-mont);
+            }
+            .ff-space {
+                font-family: var(--ff-space);
+            }
+            .fw-light {
+                font-weight: 300;
+            }
+            .flow > * + * {
+                margin-top: 1rem;
+            }
+            ::-webkit-scrollbar {
+                width: 0.95em;
+            }
+            ::-webkit-scrollbar-track {
+                background: #666;
+            }
+            ::-webkit-scrollbar-thumb {
+                background: red;
+                border: 2px solid #666;
+                border-radius: 10px;
+            }
+            .accordeon-wrapper {
+                display: grid;
+                gap: 2rem;
+            }
+            .accordeon-wrapper .accordeon {
+                background-color: #191919;
+                padding: 2rem;
+                display: grid;
+                position: relative;
+                overflow: hidden;
+                border-radius: 1rem;
+                padding-right: 2.75rem;
+            }
+            .accordeon-wrapper .accordeon h6,
+            .accordeon-wrapper .accordeon p {
+                font-size: 1rem;
+                font-weight: 400;
+                max-width: 80ch;
+                color: var(--gray-light);
+            }
+            .accordeon-wrapper .accordeon main {
+                display: grid;
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 200ms linear;
+            }
+            .accordeon-wrapper .accordeon p {
+                padding-top: 1rem;
+            }
+            .accordeon-wrapper .accordeon button {
+                position: absolute;
+                bottom: 1rem;
+                right: 1rem;
+                background: none;
+                outline: none;
+                border: none;
+                cursor: pointer;
+                animation: transform 300ms ease;
+            }
+            @media (max-width: 47em) {
+                .accordeon-wrapper .accordeon button {
+                    transform: scale(0.8);
+                }
+            }
+            @media (min-width: 45em) {
+                .accordeon-wrapper .accordeon {
+                    padding-right: 3.5rem;
+                }
+            }
+            .accordeon-wrapper .accordeon.active {
+                background-color: var(--clr-accent);
+            }
+            .accordeon-wrapper .accordeon.active h6 {
+                font-weight: 600;
+            }
+            .accordeon-wrapper .accordeon.active h6,
+            .accordeon-wrapper .accordeon.active p {
+                color: var(--white);
+            }
+            .accordeon-wrapper .accordeon.active button {
+                transform: rotate(180deg);
+            }
+            .accordeon-wrapper .accordeon.active button svg path {
+                fill: #fff;
+            }
+            .hero {
+                --space: 1.5rem;
+                background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__hero-bg.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: 70%;
+                background-color: rgba(0, 0, 0, 0.8);
+                background-blend-mode: multiply;
+                min-height: 70vh;
+            }
+            @media (min-width: 45em) {
+                .hero {
+                    background-position: center;
+                    background-color: rgba(0, 0, 0, 0.6);
+                }
+            }
+            .hero__container .logos {
+                max-width: 18rem;
+                margin-bottom: var(--spacing);
+            }
+            .hero__container h1 {
+                font-size: 1.75rem;
+                line-height: 1.3;
+                margin-bottom: var(--space);
+                max-width: 30ch;
+            }
+            .hero__container p {
+                margin-bottom: var(--space);
+                font-size: 1.125rem;
+                max-width: 40ch;
+            }
+
+            .hero__container span {
+                color: var(--clr-accent);
+                text-transform: uppercase;
+                font-family: var(--ff-trend-regular);
+                font-weight: 700;
+                font-size: 1.35rem;
+                display: block;
+                letter-spacing: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            .hero__container #form h3 strong {
+                color: var(--clr-accent);
+            }
+
+            @media (min-width: 45em) {
+                .hero {
+                    --space: 1.75rem;
+                }
+                .hero h1 {
+                    font-size: 2rem;
+                }
+            }
+            @media (min-width: 70em) {
+                .hero {
+                    --space: 2rem;
+                    background-blend-mode: unset;
+                    background-position: top center;
+                    min-height: 80vh;
+                }
+                .hero .logos {
+                    max-width: 22rem;
+                }
+                .hero a {
+                    margin-top: 4rem;
+                }
+            }
+            .quiz {
+                background-image: linear-gradient(135deg, #111111, #292929);
+            }
+            .quiz p {
+                color: var(--gray-light);
+                font-size: 1.125rem;
+            }
+
+            .quiz p + p {
+                margin-top: 2rem;
+            }
+
+            .quiz .mktoQuiz {
+                background-color: var(--gray-light);
+                width: min(100%, 45rem);
+                height: 20rem;
+                margin-inline: auto;
+                display: grid;
+                place-items: center;
+                margin-top: 3rem;
+            }
+            .pilares h2 {
+                max-width: 27ch;
+            }
+            .pilares ul {
+                margin-block: 4rem;
+                display: grid;
+                gap: 2rem;
+            }
+            .pilares ul li {
+                display: grid;
+                gap: 1rem;
+            }
+            .pilares ul li div {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+            .pilares ul li h3 {
+                font-size: 1.35rem;
+                line-height: 1.2;
+            }
+            .pilares ul li p {
+                color: var(--gray-light);
+            }
+            @media (min-width: 45em) {
+                .pilares ul {
+                    grid-template-columns: 1fr 1fr;
+                    gap: 3.5rem;
+                    column-gap: 6rem;
+                    max-width: max-content;
+                    margin-inline: auto;
+                }
+                .pilares ul li {
+                    grid-template-rows: min-content 1fr;
+                }
+                .pilares ul li h3 {
+                    font-size: 1.5rem;
+                    max-width: 24ch;
+                }
+                .pilares ul li p {
+                    max-width: 35ch;
+                }
+            }
+            .benefits {
+                padding-top: var(--spacing);
+                background-color: #1a1a1a;
+            }
+            .benefits h2 {
+                max-width: 20ch;
+            }
+            .benefits .cards {
+                display: grid;
+                gap: 2rem;
+                margin-bottom: 3rem;
+            }
+            @media (min-width: 45em) {
+                .benefits .cards {
+                    grid-template-columns: repeat(4, 1fr);
+                    grid-template-areas: "card01 card01 card02 card02" ". card03 card03 .";
+                }
+                .benefits .cards article:nth-child(1) {
+                    grid-area: card01;
+                }
+                .benefits .cards article:nth-child(2) {
+                    grid-area: card02;
+                }
+                .benefits .cards article:nth-child(3) {
+                    grid-area: card03;
+                }
+            }
+            @media (min-width: 70em) {
+                .benefits .cards {
+                    gap: 4rem;
+                    max-width: 80%;
+                    margin-inline: auto;
+                }
+            }
+            .benefits article {
+                border: 2px solid var(--gray-medium);
+                border-radius: 31px;
+                padding: 1.5rem;
+                display: grid;
+                gap: 1.5rem;
+                grid-template-rows: min-content 1fr;
+            }
+            .benefits article h3 {
+                font-size: 1.35rem;
+                line-height: 1.3;
+            }
+            .benefits article ul {
+                display: grid;
+                align-self: start;
+                gap: 1rem;
+            }
+            .benefits article ul li {
+                display: flex;
+                align-items: flex-start;
+                gap: 0.5rem;
+                color: var(--gray-light);
+            }
+            .benefits article ul li img {
+                position: relative;
+                flex-shrink: 0;
+                top: 4px;
+            }
+            @media (min-width: 70em) {
+                .benefits article {
+                    padding: 2rem;
+                    gap: 2rem;
+                }
+                .benefits article h3 {
+                    font-size: 1.5rem;
+                    max-width: 25ch;
+                }
+            }
+            .benefits .btn-container {
+                background-color: var(--gray-dark);
+                background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__vectorbtn.svg");
+                background-size: cover;
+                background-position: bottom;
+                padding-block: 3rem 5rem;
+            }
+            .uses h2 {
+                max-width: 22ch;
+            }
+            .uses a {
+                margin-top: 3rem;
+            }
+            .footer {
+                background-color: var(--black);
+                color: var(--gray-light);
+            }
+            .footer__container {
+                display: grid;
+                place-items: center;
+                font-size: 0.9rem;
+                padding-block: 1.5rem;
+            }
+
+            /* TP */
+            .tp_hero {
+                --space: 1.5rem;
+
+                background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__hero-bg.png");
+
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-color: rgba(0, 0, 0, 0.5);
+                background-blend-mode: multiply;
+                min-height: 70vh;
+            }
+            .tp_hero .logos {
+                max-width: 18rem;
+                margin-bottom: var(--spacing);
+            }
+            @media (min-width: 70em) {
+                .tp_hero {
+                    background-blend-mode: unset;
+                    min-height: 80vh;
+                }
+                .tp_hero .logos {
+                    max-width: 22rem;
+                }
+            }
+
+            .tp_hero h1 {
+                font-size: 2.25rem;
+                line-height: 1.3;
+                margin-bottom: var(--space);
+                max-width: 30ch;
+            }
+            .tp_hero h1 strong {
+                color: var(--clr-accent);
+            }
+            .tp_hero p {
+                margin-bottom: var(--space);
+                font-size: 1.125rem;
+                max-width: 60ch;
+            }
+
+            .tp_quiz {
+                padding-block: 3rem;
+            }
+
+            .tp_btns {
+                display: flex;
+                gap: 1rem;
+                flex-wrap: wrap;
+                margin-top: 2rem;
+            }
+
+            @media (min-width: 45em) {
+                .tp_hero h1 {
+                    font-size: 2.5rem;
+                }
+            } /*# sourceMappingURL=style.css.map */
+
+            /* VIDEO TP*/
+            .videos {
+                --space: 1.5rem;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
+                background-color: rgba(0, 0, 0, 0.5);
+                background-blend-mode: multiply;
+                min-height: 70vh;
+            }
+            .videos__container .logos {
+                max-width: 18rem;
+                margin-bottom: var(--spacing);
+            }
+            @media (min-width: 70em) {
+                .videos {
+                    background-blend-mode: unset;
+                    min-height: 80vh;
+                }
+                .videos .logos {
+                    max-width: 22rem;
+                }
+            }
+
+            /* ----------------------------------- FORM ---------------------------------------- */
+            #mktoForm_25206 {
+                max-width: 40rem !important;
+                width: 100% !important;
+                margin-top: 1.5rem;
+            }
+
+            #LblGlobalPRM_MSP_Agree_to_MSP_terms__c {
+                width: 100% !important;
+                position: relative !important;
+                text-indent: 30px !important;
+                font-size: 0.8rem !important;
+                font-weight: 400 !important;
+                line-height: 1.5;
+                cursor: pointer;
+                text-align: justify;
+            }
+
+            #GlobalPRM_MSP_Agree_to_MSP_terms__c {
+                top: 5px;
+                left: 17px;
+                position: absolute !important;
+                width: auto !important;
+                padding: 0.25rem !important;
+                cursor: pointer;
+            }
+
+            .mktoForm input[type="text"],
+            .mktoForm input[type="url"],
+            .mktoForm input[type="email"],
+            .mktoForm input[type="tel"],
+            .mktoForm input[type="number"],
+            .mktoForm input[type="date"],
+            .mktoForm textarea.mktoField,
+            .mktoForm select.mktoField {
+                display: block !important;
+
+                padding: 0.25em 1em !important;
+                min-height: 38px !important;
+                width: 100% !important;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+                margin-top: 0.25rem !important;
+                font-size: 1rem;
+                font-weight: 400;
+                background-color: #3c3c3c !important;
+                color: white !important;
+            }
+
+            /* input:hover,
+select:hover {
+    outline: 2px solid rgb(114, 114, 114) !important;
+    outline-offset: 2px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid rgb(173, 173, 173) !important;
+    outline-offset: 2px;
+} */
+
+            input::placeholder,
+            select::placeholder {
+                font-size: 1rem !important;
+                opacity: 0.8;
+            }
+
+            .mktoForm select.mktoField {
+                background-image: url(https://resources.trendmicro.com/rs/945-CXD-062/images/trendmicro-select.svg);
+                background-repeat: no-repeat;
+                background-position: 95% center;
+                background-size: 10px;
+                appearance: none;
+            }
+
+            .mktoForm .mktoRequiredField label.mktoLabel {
+                display: block;
+                float: none;
+                color: #cccccc;
+                width: 100% !important;
+                padding-left: 15px;
+                font-size: 0.9rem;
+                font-weight: 400 !important;
+            }
+
+            .mktoForm .mktoFieldWrap {
+                float: none !important;
+            }
+
+            .mktoForm .mktoFormCol {
+                float: none !important;
+            }
+            .mktoGutter.mktoHasWidth {
+                width: auto !important;
+            }
+
+            .mktoAsterix {
+                color: var(--clr-accent) !important;
+                float: none !important;
+                position: absolute;
+                left: 0;
+                font-size: 1.25rem;
+            }
+
+            .mktoButtonRow {
+                width: 100%;
+            }
+
+            .mktoButtonWrap.mktoSimple {
+                margin: 0 !important;
+            }
+
+            .mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton {
+                display: inline-block;
+                cursor: pointer;
+                background-color: transparent;
+                outline: none;
+                border: none;
+                width: 100% !important;
+                padding: 0.5em 2em !important;
+                margin-top: 1rem;
+                background-color: var(--clr-accent) !important;
+                font-weight: 500 !important;
+                font-size: 1.125rem !important;
+                border-radius: 10px;
+
+                color: var(--white) !important;
+                background-image: none !important;
+                border: none !important;
+            }
+
+            .mktoForm .mktoError .mktoErrorMsg {
+                background-image: none !important;
+                /* background-color: #000 !important; */
+                border: none !important;
+                text-shadow: none !important;
+                font-weight: 600 !important;
+                -webkit-box-shadow: none !important;
+                box-shadow: rgb(0 0 0 / 65%) 0 2px 7px, inset #000000 0 1px 0px !important;
+            }
+
+            @media (min-width: 700px) {
+                #mktoForm_25206 {
+                    display: grid !important;
+                    column-gap: 1.25rem;
+                    grid-template-areas:
+                        "row1 row1"
+                        "row2 row3"
+                        "row2 row3"
+                        "row4 row5"
+                        "button button";
+                }
+
+                .mktoFormRow:nth-child(2) {
+                    grid-area: row1;
+                    display: grid;
+                    justify-content: space-between;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows: 3.5rem;
+                    gap: 1.25rem;
+                    height: auto !important;
+                    align-self: end !important;
+                }
+
+                .mktoButtonRow {
+                    grid-area: button;
+                }
+            }
+
+            /* VIDEOS */
+            .videos_page {
+                /* display: grid; */
+                background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__hero-bg.png");
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: top center;
+            }
+        </style>
+
+        <style>
+            div#innerWrapDiv {
+                width: 100% !important;
+                height: 100vh !important;
+            }
+
+            #innerWrapDiv > div:nth-child(2) {
+                width: 100% !important;
+                height: 100% !important;
+                left: 0 !important;
+            }
+        </style>
+
+        <div class="tkp">
+            <section class="tp_hero spacing">
+                <div class="container tp_hero__container">
+                    <img
+                        src="https://resources.trendmicro.com/rs/945-CXD-062/images/cloudone-otim__hero-logos.png"
+                        alt="Logo AWS e Trend micro lado a lado"
+                        class="logos"
+                    />
+
+                    <h1 class="ff-trend-bold">
+                        <strong>Obrigado</strong> pela <br />
+                        participação!
+                    </h1>
+                    <p class="ff-trend-regular fw-light">
+                        Agora você já sabe que tipo de solução é capaz de
+                        corresponder às suas expectativas de segurança de dados
+                        na nuvem. A nossa equipe está à sua disposição para
+                        tirar qualquer dúvida, ok?
+                    </p>
+
+                    <div class="tp_btns">
+                        <a
+                            href="https://outlook.office365.com/owa/calendar/TrendMicro2024581@TrendMicro.onmicrosoft.com/bookings/s/bLXSk_Zy0kGB6YmzSFbOoA2"
+                            target="_blank"
+                            rel="noreferrer nofollow"
+                            class="btn"
+                            >Fale com um especialista</a
+                        >
+
+                        <a
+                            href="https://outlook.office365.com/owa/calendar/TrendMicro2024581@TrendMicro.onmicrosoft.com/bookings/s/bLXSk_Zy0kGB6YmzSFbOoA2"
+                            target="_blank"
+                            rel="noreferrer nofollow"
+                            class="btn"
+                            >COMECE O TRIAL</a
+                        >
+                    </div>
+                </div>
+            </section>
+
+            <section class="tp_quiz">
+                <div class="typeform-quiz container" style="margin-top: 2rem">
+                    <!-- <div
+                        data-tf-widget="PpElvgSC"
+                        data-tf-iframe-props="title=Quiz: qual a solução de segurança de dados na nuvem ideal para a sua empresa?"
+                        data-tf-medium="snippet"
+                        style="width: 100%; height: 600px"
+                    ></div>
+                    <script src="//embed.typeform.com/next/embed.js"></script> -->
+                </div>
+
+                <!-- SCRIPT -->
+                <script>
+                    const queryForm = function (settings) {
+                        let FULL_STRING_UTMS = "";
+                        const reset =
+                            settings && settings.reset ? settings.reset : false;
+                        const self = window.location.toString();
+                        const querystring = self.split("?");
+
+                        if (querystring.length > 1) {
+                            const pairs = querystring[1].split("&");
+                            for (i in pairs) {
+                                var keyval = pairs[i].split("=");
+
+                                FULL_STRING_UTMS += `${keyval[0]}=${keyval[1]},`;
+
+                                if (
+                                    reset ||
+                                    sessionStorage.getItem(keyval[0]) === null
+                                ) {
+                                    sessionStorage.setItem(
+                                        keyval[0],
+                                        decodeURIComponent(keyval[1])
+                                    );
+                                }
+                            }
+                        }
+
+                        let FULL_STRING_UTMS_EDITED = FULL_STRING_UTMS.slice(
+                            0,
+                            -1
+                        );
+
+                        if (FULL_STRING_UTMS_EDITED) {
+                            const quizWrapper =
+                                document.querySelector(".typeform-quiz");
+
+                            quizWrapper.innerHTML = `
+                            <div
+                                data-tf-widget="PpElvgSC"
+                                data-tf-iframe-props="title=Quiz: qual a solução de segurança de dados na nuvem ideal para a sua empresa?"
+                                data-tf-medium="snippet"
+                                data-tf-hidden="${FULL_STRING_UTMS_EDITED}"
+                                style="width: 100%; height: 720px"
+                            ></div>
+                           
+                            `;
+
+                            const scriptTag = document.createElement("script");
+                            scriptTag.setAttribute(
+                                "src",
+                                "//embed.typeform.com/next/embed.js"
+                            );
+                            quizWrapper.append(scriptTag);
+                        } else {
+                            const quizWrapper =
+                                document.querySelector(".typeform-quiz");
+
+                            quizWrapper.innerHTML = `
+                            <div
+                                data-tf-widget="PpElvgSC"
+                                data-tf-iframe-props="title=Quiz: qual a solução de segurança de dados na nuvem ideal para a sua empresa?"
+                                data-tf-medium="snippet"
+                                data-tf-hidden=""
+                                style="width: 100%; height: 720px"
+                            ></div>
+                            `;
+
+                            const scriptTag = document.createElement("script");
+                            scriptTag.setAttribute(
+                                "src",
+                                "//embed.typeform.com/next/embed.js"
+                            );
+                            quizWrapper.append(scriptTag);
+                        }
+                    };
+
+                    setTimeout(() => {
+                        queryForm();
+                    }, 1000);
+                </script>
+            </section>
+
+            <footer class="footer">
+                <div class="container footer__container">
+                    <p>Trend Micro 2022 &copy; Todos os Direitos Reservados</p>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>

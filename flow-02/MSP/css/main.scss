@@ -1,0 +1,408 @@
+@use "reset";
+@use "global";
+@use "form";
+
+/* ----------------------- HEADER -----------------------------*/
+.header {
+    background-color: var(--black);
+    color: var(--white);
+
+    background-size: cover;
+    background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/msp__header-bg.png");
+    background-position: left;
+    background-repeat: no-repeat;
+
+    @media (min-width: 45em) {
+        background-position: center;
+    }
+
+    &__container {
+        padding-block: var(--spacing);
+
+        img {
+            max-width: 15rem;
+            padding-bottom: var(--spacing);
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            line-height: 1.4;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.25rem;
+            margin-block: 2rem;
+        }
+
+        ul {
+            display: grid;
+            gap: 0.35rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-size: 1.125rem;
+
+                &::before {
+                    content: "";
+                    width: 6px;
+                    aspect-ratio: 1;
+                    border-radius: 50%;
+                    background-color: var(--red);
+                }
+            }
+        }
+
+        a {
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 40em) {
+            h1 {
+                max-width: 28ch;
+                font-size: 2rem;
+            }
+
+            p {
+                max-width: 55ch;
+            }
+        }
+
+        @media (min-width: 70em) {
+            h1 {
+                font-size: 2.25rem;
+            }
+        }
+    }
+}
+
+/* ----------------------- MAIN CONTENT -----------------------------*/
+.portfolio {
+    padding-block: var(--spacing);
+
+    position: relative;
+    overflow: hidden;
+
+    @media (min-width: 1124px) {
+        &::before {
+            content: "";
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/msp__shape.png");
+            position: absolute;
+            width: 30rem;
+            aspect-ratio: 1;
+            z-index: -1;
+            transform: scale(2);
+            top: 0;
+            right: 0rem;
+        }
+    }
+
+    &__container {
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            max-width: 34ch;
+
+            &::after {
+                content: "";
+                display: block;
+                background-color: var(--red);
+                width: 50px;
+                height: 5px;
+                margin-top: 0.65rem;
+            }
+        }
+    }
+
+    .articles {
+        display: grid;
+        gap: 3.5rem;
+
+        margin-block: 3.5rem;
+
+        article {
+            display: grid;
+
+            h3 {
+                font-weight: 700;
+                font-size: 1.35rem;
+            }
+
+            p {
+                margin-block: 0.65rem;
+                max-width: 60ch;
+            }
+
+            a {
+                text-decoration: underline;
+                color: var(--red);
+            }
+        }
+
+        @media (min-width: 60em) {
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+
+            article {
+                justify-self: start;
+            }
+        }
+    }
+}
+
+.benefits {
+    padding-block: var(--spacing);
+    background-color: var(--light-gray);
+
+    h2 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin-bottom: 3rem;
+        font-weight: 700;
+    }
+
+    article {
+        display: grid;
+        grid-template-rows: 7rem min-content 1fr;
+
+        img {
+            align-self: center;
+        }
+
+        h3 {
+            color: var(--red);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 1.35rem;
+        }
+
+        ul {
+            display: grid;
+            gap: 1rem;
+            align-self: start;
+        }
+    }
+
+    a {
+        margin-top: 4rem;
+        margin-inline: auto;
+        display: grid;
+        max-width: fit-content;
+    }
+
+    .glider-track {
+        gap: 4rem;
+    }
+    .glider-contain {
+        padding-inline: 0.5rem;
+    }
+
+    @media (min-width: 856px) {
+        .glider-prev {
+            left: -35px;
+        }
+    }
+}
+
+.msp {
+    padding-block: var(--spacing);
+
+    &__container {
+        display: grid;
+        gap: 4rem;
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin-block: 1rem;
+
+            max-width: 60ch;
+        }
+
+        ul {
+            display: grid;
+            gap: 1rem;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                font-weight: 700;
+                font-size: 1.125rem;
+
+                img {
+                    max-width: 2.75rem;
+                }
+            }
+        }
+
+        a {
+            margin-top: 2rem;
+        }
+
+        @media (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+
+            .image {
+                position: relative;
+
+                &::before {
+                    content: "";
+                    width: 300px;
+                    aspect-ratio: 1;
+                    background-color: var(--red);
+                    position: absolute;
+                    right: -20px;
+                    top: -20px;
+                    z-index: -1;
+
+                    @media (min-width: 1500px) {
+                        right: -10px;
+                    }
+
+                    @media (min-width: 1600px) {
+                        right: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.trust {
+    padding-block: var(--spacing);
+    background-color: var(--black);
+    color: var(--white);
+
+    background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/msp__bg-trust.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right;
+
+    .content {
+        h2 {
+            font-weight: 700;
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        p {
+            font-size: 1.125rem;
+        }
+
+        .bold {
+            margin-top: 1rem;
+        }
+
+        a {
+            margin-top: 2rem;
+        }
+    }
+
+    @media (min-width: 45em) {
+        background-position: center;
+
+        .content {
+            margin-left: auto;
+            text-align: right;
+            max-width: 32rem;
+        }
+    }
+
+    @media (min-width: 70em) {
+        .content {
+            max-width: 40rem;
+        }
+    }
+}
+
+.contact {
+    background-color: var(--red);
+    color: var(--white);
+
+    &__container {
+        display: grid;
+
+        @media (min-width: 45em) {
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+    }
+
+    .content {
+        max-width: 45em;
+        padding-inline: 5%;
+        padding-block: var(--spacing);
+        margin-inline: auto;
+
+        h2 {
+            font-size: 1.35rem;
+            font-weight: 400;
+            text-align: center;
+            margin-bottom: 2rem;
+
+            span {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .image {
+        background-image: url("https://resources.trendmicro.com/rs/945-CXD-062/images/msp__foto-02.png");
+        background-size: cover;
+        background-position: center;
+
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.mktoButtonRow .mktoButtonWrap.mktoSimple .mktoButton {
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: none;
+
+    width: 100% !important;
+    padding: 0.75em 2em !important;
+
+    color: var(--white);
+    font-weight: 500 !important;
+    font-size: 1.125rem !important;
+    border-radius: 9999px;
+
+    background-color: var(--black) !important;
+    background-image: none !important;
+    border: none !important;
+
+    &:hover,
+    &:focus {
+        background-color: #fff !important;
+        color: var(--black);
+        transition: all 300ms;
+    }
+}
+
+/* ----------------------- FOOTER -----------------------------*/
+.footer {
+    background-color: var(--black);
+    color: var(--white);
+    font-size: 0.85rem;
+    text-align: center;
+    display: grid;
+    place-items: center;
+
+    &__container {
+        padding-block: 1rem;
+    }
+}
